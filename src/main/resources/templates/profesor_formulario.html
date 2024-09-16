@@ -50,7 +50,7 @@ body {
 
 	<div class="container">
 		<div class="welcome-text">
-			<h1>Crear Profesor</h1>
+			<h1 th:text="${profesor.id == null ? 'Crear Profesor' : 'Editar Profesor'}"></h1>
 
 			<form th:action="@{/profesores/guardar}" th:object="${profesor}"
 				method="post">
